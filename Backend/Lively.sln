@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lively", "Lively\Lively.csproj", "{91EE5E76-59EB-463C-B331-F2B780A8139A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E74222AD-7D77-4AD1-B97A-0B9B23CF4B2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F24743CB-DE4B-4B98-9C22-F8D092F67116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91EE5E76-59EB-463C-B331-F2B780A8139A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EE5E76-59EB-463C-B331-F2B780A8139A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EE5E76-59EB-463C-B331-F2B780A8139A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EE5E76-59EB-463C-B331-F2B780A8139A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74222AD-7D77-4AD1-B97A-0B9B23CF4B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74222AD-7D77-4AD1-B97A-0B9B23CF4B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74222AD-7D77-4AD1-B97A-0B9B23CF4B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74222AD-7D77-4AD1-B97A-0B9B23CF4B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F24743CB-DE4B-4B98-9C22-F8D092F67116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F24743CB-DE4B-4B98-9C22-F8D092F67116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F24743CB-DE4B-4B98-9C22-F8D092F67116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F24743CB-DE4B-4B98-9C22-F8D092F67116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

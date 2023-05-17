@@ -1,0 +1,83 @@
+<h1 *ngIf="!newsData">{{comment}}</h1>
+
+<div class="container mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+        <!-- Column -->
+        <div class="my-1 px-1 w-full h-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                <header *ngFor="let item of newsData.results"
+                    class="flex items-center justify-between leading-tight p-1 md:p-2 bg-black bg-opacity-50">
+                    <a class="ml-2 text-sm no-underline hover:underline text-white" href="{{item.link}}">
+                        👏 {{item.title}}
+                    </a>
+                </header>
+
+            </article>
+            <!-- END Article -->
+        </div>
+        <!-- END Column -->
+
+
+        <!-- Column -->
+        <div *ngFor="let item of newsData.results" class="my-1 px-1 w-full h-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg">
+                <div class="absolute text-right">
+                    <button (click)="service.saveNews(item)"
+                        class="inline-flex items-center justify-center w-8 h-8 mr-2 text-rose-100 transition-colors duration-150 bg-rose-700 rounded-full focus:shadow-outline hover:bg-rose-800 m-2">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-bookmark-dash-fill" viewBox="0 0 16 16" id="IconChangeColor">
+                            <path fill-rule="evenodd"
+                                d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM6 6a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z"
+                                id="mainIconPathAttribute"></path>
+                        </svg>
+                    </button>
+                </div>
+
+
+                <a href="{{item.link}}">
+                    <img *ngIf="!item.image_url" alt="Placeholder" class="block h-auto w-full"
+                        src="https://picsum.photos/600/400/?random">
+                    <img *ngIf="item.image_url" alt="Placeholder" class="block h-auto w-full" src="{{item.image_url}}">
+                </a>
+
+                <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black bg-opacity-50">
+                    <h1 class="ml-2 text-lg">
+                        <a class="no-underline hover:underline text-white" href="{{item.link}}">
+                            {{item.title}}
+                        </a>
+                    </h1>
+                    <p class="text-white text-sm">
+                        {{item.pubDate}}
+                    </p>
+                </header>
+
+                <footer class="flex items-center justify-between leading-none p-2 md:p-4 bg-black bg-opacity-50">
+                    <a class="flex items-center no-underline text-white mr-5">
+                        <p *ngIf="item.description" class="text-sm">
+                            <a class="no-underline hover:underline" href="{{item.link}}">{{item.description |
+                                slice:0:350}}...</a>
+                        </p>
+                        <p *ngIf="!item.description" class="text-sm">
+                            For more comprehensive information and detailed coverage of this news, we invite you to
+                            click here. The provided link will direct you to a webpage containing extensive details,
+                            including text, images, videos, and other media related to the topic. Don't miss out on the
+                            opportunity to delve into this topic further by exploring the diverse range of media content
+                            available through the <a class="no-underline hover:underline" href="{{item.link}}">provided
+                                link.</a>
+                        </p>
+                    </a>
+                </footer>
+            </article>
+            <!-- END Article -->
+        </div>
+        <!-- END Column -->
+
+
+
+    </div>
+</div>
